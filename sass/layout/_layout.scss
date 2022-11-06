@@ -1,0 +1,57 @@
+.container {
+    background-color: #fff;
+    max-width: 45rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.5rem;
+    text-align: center;
+    height: 90vh;
+    overflow: hidden;
+
+    @include respond(phone) {
+        max-width: 35rem;
+    }
+}
+
+.plan {
+    background-color: $color-neutral-very-pale-blue;
+    margin: auto;
+    max-width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+
+    @include respond(phone) {
+        max-width: 90%;
+    }
+
+    &__price {
+        margin-right: 4rem;
+
+        &-primary {
+            font-weight: 900;
+            margin-bottom: .5rem;
+        }
+        
+        &-sub {
+            color: #777;
+            font-weight: 500;
+        }
+    }
+
+    &__change-text {
+        color: $color-primary-bright-blue;
+
+        &:hover {
+            color: $color-neutral-desaturated-blue;
+        }
+    }
+}
+
+.section-button {
+    margin-top: 3rem;
+}
